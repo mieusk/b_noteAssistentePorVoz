@@ -34,6 +34,7 @@ Vai ficar mais ou menos assim:
 </p>
 
 
+
 Execute `py note.py`.
 
 Você deve falar o nome do assistente + o comando, exemplo: `note tocar justin bieber love me`.
