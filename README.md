@@ -14,7 +14,7 @@ Não planejo melhorá-lo, mas você pode utilizar o código dele para fazer modi
 - O comando "tocar" só funciona uma vez, em seguida não funciona mais;
 - Finaliza em erro caso o resultado for uma playlist/filme.
 
-Além de que
+Além de que não existe o comando "pular" para pular a música; sim, eu sei como corrigir estes problemas, mas estou ocupado e sou preguiçoso.
 
 ### Dependências
 
