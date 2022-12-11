@@ -12,7 +12,7 @@ Não planejo melhorá-lo, mas você pode utilizar o código dele para fazer modi
 ### Bugs
 
 - O comando "tocar" só funciona uma vez, em seguida não funciona mais;
-- Trava caso o resultado for uma playlist/filme.
+- Finaliza em erro caso o resultado for uma playlist/filme.
 
 Além de que
 
