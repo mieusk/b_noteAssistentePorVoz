@@ -25,7 +25,7 @@ Utilize `pip install [dependência]` para baixá-las.
 
 Baixe os arquivos `note.py`, `chromedriver.exe`, e `cmedhionkhpnakcndndgjdbohmhepckk.zip`.
 
-É necessário baixar, também, o `Google Chrome 89.0.4389.90` e colocá-lo na mesma pasta do script.
+É necessário baixar o `Google Chrome 89.0.4389.90` e **colocá-lo na mesma pasta do script**.
 
 Execute `py note.py`.
 
