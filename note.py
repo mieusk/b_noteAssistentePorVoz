@@ -62,8 +62,8 @@ def ouvir():
 	return query
 
 if __name__ == '__main__':
-	clear = lambda: os.system('cls')
-	clear()
+	limpar = lambda: os.system('cls')
+	limpar()
 	inicio()
 	if EC.number_of_windows_to_be(2):
 		driver.switch_to.window(youtube)
@@ -75,6 +75,7 @@ if __name__ == '__main__':
 
 			if 'tocar' in query2 or 'toca' in query2 or 'toque' in query2:
 				element = driver.find_element_by_name('search_query')
+				element.clear()
 				query22 = query2.replace('tocar', '').replace('note', '').replace('toca', '').replace('toque', '')
 				element = element.send_keys(query22)
 				element = driver.find_element(By.XPATH, "//*[@class='style-scope ytd-searchbox']")
