@@ -31,10 +31,12 @@ Baixe os arquivos `note.py`, `chromedriver.exe`, e `cmedhionkhpnakcndndgjdbohmhe
 É necessário baixar o `Google Chrome 89.0.4389.90` e **colocá-lo na mesma pasta do script**.
 
 #
+
 Vai ficar mais ou menos assim:
 <p align="center">
 <img src="https://user-images.githubusercontent.com/75510861/206913609-1726bdd9-6aa1-4fc1-b069-770994523d74.png" />
 </p>
+
 #
 
 Execute `py note.py`.
