@@ -1,12 +1,5 @@
 import pyttsx3, speech_recognition as sr, datetime, os, shutil
 
-from twilio.rest import Client
-from clint.textui import progress
-from ecapture import ecapture as ec
-from bs4 import BeautifulSoup
-import win32com.client as wincl
-from urllib.request import urlopen
-
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
@@ -16,39 +9,37 @@ from selenium.webdriver.support import expected_conditions as EC
 engine = pyttsx3.init('sapi5')
 engine.setProperty('voice', 'brazil')
 
+diretorioAtual = os.getcwd()
 options = Options()
-options.binary_location = "C:/b/chrome.exe"
-
-options.add_argument('--headless')
-options.add_argument('--disable-dev-shm-usage')
-driver = webdriver.Chrome(options=options, executable_path="C:/b/chromedriver.exe", )
+options.binary_location = "{}\\chrome.exe".format(diretorioAtual)
+options.add_extension('{}\\cmedhionkhpnakcndndgjdbohmhepckk.zip'.format(diretorioAtual))
+driver = webdriver.Chrome(options=options, executable_path="{}\\chromedriver.exe".format(diretorioAtual))
+driver.set_window_position(-10000, -10000)
 driver.get('https://www.youtube.com')
+youtube = driver.current_window_handle
 
-def speak(audio):
+def fale(audio):
 	engine.say(audio)
 	engine.runAndWait()
 
-def wishMe():
+def inicio():
 	hour = int(datetime.datetime.now().hour)
 	if hour>= 0 and hour<12:
-		speak("Bom dia, minhe linde!")
+		fale('Bom dia, minhe linde!')
 
 	elif hour>= 12 and hour<18:
-		speak("Boa tarde, minhe linde!")  
+		fale('Boa tarde, minhe linde!')  
 
 	else:
-		speak("Boa noite, minhe linde!")
+		fale('Boa noite, minhe linde!')
 
- 
-def username():
 	columns = shutil.get_terminal_size().columns
-	print("#####################".center(columns))
-	print("Bem-vinde, minhe linde.".center(columns))
-	print("#####################".center(columns))
-	 
-	speak("Diga seu comando")
+	print('#####################'.center(columns))
+	print('Bem-vinde, minhe linde.'.center(columns))
+	print('#####################'.center(columns))
+	fale('Diga seu comando')
  
-def takeCommand():
+def ouvir():
 	 
 	r = sr.Recognizer()
 	 
@@ -65,7 +56,7 @@ def takeCommand():
   
 	except Exception as e:
 		print(e)   
-		print("Não reconhecemos.") 
+		print("Não reconheci.") 
 		return "None"
 	 
 	return query
@@ -73,11 +64,12 @@ def takeCommand():
 if __name__ == '__main__':
 	clear = lambda: os.system('cls')
 	clear()
-	wishMe()
-	username()
-	 
+	inicio()
+	if EC.number_of_windows_to_be(2):
+		driver.switch_to.window(youtube)
+
 	while True:
-		query = takeCommand().lower()
+		query = ouvir().lower()
 		if query.startswith('note'):
 			query2 = query.replace('note', '')
 
@@ -90,16 +82,16 @@ if __name__ == '__main__':
 				element = WebDriverWait(driver, 5).until(EC.visibility_of_element_located((By.XPATH, "//*[@class='yt-simple-endpoint style-scope ytd-video-renderer']")))
 				element = driver.find_element(By.XPATH, "//*[@class='yt-simple-endpoint style-scope ytd-video-renderer']")
 				element.get_attribute('href')
-				speak("Tocando.")
+				fale("Tocando.")
 				element.click()
  
 			elif 'hora' in query2:
 				strTime = datetime.datetime.now().strftime("%H:%M")   
-				speak(f"São {strTime} horas.")
+				fale(f"São {strTime} horas.")
 
 			elif 'para' in query2 or 'parar' in query2 or 'silêncio' in query2:
 				element = driver.find_element(By.XPATH, "//*[@class='style-scope ytd-logo']")
 				element.click()
 			
 			else:
-				speak('Não posso ajudar.')
+				fale('Não posso ajudar.')
