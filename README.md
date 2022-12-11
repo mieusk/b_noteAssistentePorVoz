@@ -31,4 +31,4 @@ Execute `py note.py`.
 
 ### Créditos
 
-- [<a href="https://www.geeksforgeeks.org/voice-assistant-using-python]">GeeksforGeeks</a>]
+- [<a href="https://www.geeksforgeeks.org/voice-assistant-using-python">GeeksforGeeks</a>]
