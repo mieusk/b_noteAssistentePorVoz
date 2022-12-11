@@ -14,6 +14,7 @@ Exemplo: `note tocar justin bieber love me`.
 ### Bugs
 
 - Finaliza em erro caso o resultado for uma playlist/filme;
+- Finaliza em erro caso um fone de ouvido seja desconectado da máquina;
 - Falta o comando "pular" para pular a música.
 
 
