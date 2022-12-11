@@ -1,7 +1,7 @@
 ## Note
 
-Note é um assistente por voz experimental, ele só executa 3 funções: tocar, horas e silêncio.
-Não planejo melhorá-lo, mas você pode utilizar o código dele para fazer modificações.
+Note é um assistente virtual que responde através da sua voz. Basta dizer: `note` + comando que ele fará o que lhe foi proposto. Ele só tem 3 comandos: tocar, horas e silêncio.
+Não planejo melhorá-lo, mas você pode utilizar o código dele e fazer modificações para o que desejar.
 
 ### Comandos
 
