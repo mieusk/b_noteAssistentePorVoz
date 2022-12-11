@@ -33,7 +33,6 @@ Vai ficar mais ou menos assim:
 <img src="https://user-images.githubusercontent.com/75510861/206913609-1726bdd9-6aa1-4fc1-b069-770994523d74.png" />
 </p>
 
-#
 
 Execute `py note.py`.
 
