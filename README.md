@@ -23,7 +23,7 @@ Utilize `pip install [dependência]` para baixá-las.
 
 ### Uso
 
-Baixe o arquivo `note.py`, o arquivo `chromedriver.exe`, o arquivo `chrome.exe` e o arquivo `cmedhionkhpnakcndndgjdbohmhepckk.zip`; Execute `py note.py`.
+Baixe os arquivos `note.py`, `chromedriver.exe`, `chrome.exe` e `cmedhionkhpnakcndndgjdbohmhepckk.zip`; Execute `py note.py`.
 
 ### Créditos
 
