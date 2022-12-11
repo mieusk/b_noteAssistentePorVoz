@@ -5,6 +5,6 @@ Não planejo melhorá-lo, mas você pode utilizar o código dele para fazer modi
 
 Dependências: 
 ```pyttsx3, speech_recognition, shutil, selenium```
-Uitilize `pip install [dependência]` para instalar os arquivos necessários.
+Utilize `pip install [dependência]` para instalar os arquivos necessários.
 
 Créditos: - [<a href="https://www.geeksforgeeks.org/voice-assistant-using-python]">GeeksforGeeks</a>]
